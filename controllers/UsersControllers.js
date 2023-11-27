@@ -7,8 +7,8 @@ const controllerType = "User";
 module.exports.getUser = (request, response) => {
   const id = request.params.id;
   UserModel.find()
-    .then(users => {
-      const user = users?.find(usr => usr.username === id);
+    .then((users = []) => {
+      const user = users.find(usr => usr.username === id);
       if (!user._id) {
         throw new Error();
       }
