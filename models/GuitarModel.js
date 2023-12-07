@@ -75,6 +75,18 @@ const todoListSchema = new mongoose.Schema({
   }
 });
 
+const playLogSchema = new mongoose.Schema({
+  playDate: {
+    type: String
+  },
+  playedBy: {
+    type: String
+  },
+  notes: {
+    type: String
+  }
+});
+
 const guitarSchema = new mongoose.Schema({
   name: {
     type: String,
@@ -143,6 +155,7 @@ const guitarSchema = new mongoose.Schema({
   specifications: [specificationSchema],
   maintenance: [maintenanceSchema],
   todoList: [todoListSchema],
+  playLog: [playLogSchema],
   lastUpdated: {
     type: Date,
     required: true,
