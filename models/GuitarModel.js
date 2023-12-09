@@ -76,6 +76,9 @@ const todoListSchema = new mongoose.Schema({
 });
 
 const playLogSchema = new mongoose.Schema({
+  id: {
+    type: String
+  },
   playDate: {
     type: String
   },
@@ -144,6 +147,9 @@ const guitarSchema = new mongoose.Schema({
     type: String
   },
   lastPlayed: {
+    type: String
+  },
+  sibling: {
     type: String
   },
   purchaseHistory: [purchaseHistorySchema],
