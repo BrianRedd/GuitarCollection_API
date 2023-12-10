@@ -146,9 +146,6 @@ const guitarSchema = new mongoose.Schema({
   tuning: {
     type: String
   },
-  lastPlayed: {
-    type: String
-  },
   sibling: {
     type: String
   },
