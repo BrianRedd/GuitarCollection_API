@@ -80,4 +80,10 @@ router.post("/saveuser", saveUser);
 router.put("/updateuser/:id", updateUser);
 router.delete("/deleteuser/:id", deleteUser);
 
+// Wish List
+router.get("/getWishList", getWishList);
+router.post("/saveWishList", saveWishItem);
+router.put("/updateWishList/:id", updateWishItem);
+router.delete("/deleteWishList/:id", deleteWishItem);
+
 module.exports = router;
