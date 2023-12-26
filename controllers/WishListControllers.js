@@ -7,7 +7,7 @@ const controllerType = "Wish List Item";
 module.exports.getWishList = async (request, response) => {
   const wishes = await WishListModel.find();
   const message = `${wishes.length} ${controllerType}${
-    guitars.length === 1 ? "" : "s"
+    wishes.length === 1 ? "" : "s"
   } Loaded Successfully`;
   response.send({data: wishes, message});
 };

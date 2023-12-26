@@ -28,6 +28,12 @@ const {
   updateUser,
   deleteUser
 } = require("../controllers/UsersControllers");
+const {
+  getWishList,
+  saveWishItem,
+  updateWishItem,
+  deleteWishItem
+} = require("../controllers/WishListControllers");
 
 // image upload
 var brandStorage = multer.diskStorage({
@@ -81,9 +87,9 @@ router.put("/updateuser/:id", updateUser);
 router.delete("/deleteuser/:id", deleteUser);
 
 // Wish List
-router.get("/getWishList", getWishList);
-router.post("/saveWishList", saveWishItem);
-router.put("/updateWishList/:id", updateWishItem);
-router.delete("/deleteWishList/:id", deleteWishItem);
+router.get("/getwishlist", getWishList);
+router.post("/savewishlist", saveWishItem);
+router.put("/updatewishlist/:id", updateWishItem);
+router.delete("/deletewishlist/:id", deleteWishItem);
 
 module.exports = router;
